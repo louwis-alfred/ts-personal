@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 interface Person {
@@ -7,16 +8,20 @@ interface Person {
 }
 
 export const Person: React.FC<Person> = (props) => {
-  const [personBio, SetPersionBio] = useState<string | null>(null)
+  const [personBio, SetPersonBio] = useState<string | null>(null);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    SetPersonBio(event.target.value);
+  };
   return (
     <div>
       <p>Name: {props.name}</p>
       <p>Age: {props.age}</p>
-      <p>This person: {props.isMarried ? "is Married" : "is Single"}</p>
+      <p>This person: {props.isMarried ? "is Married" : "is Sin gle"}</p>
       <p>
         {""}
         {props.name} Bio: {!personBio ? "No Bio Available" : personBio}
       </p>
+      <input onChange={handleChange} />
     </div>
   );
 };

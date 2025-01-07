@@ -1,5 +1,5 @@
 import { Person } from "./Person";
-
+import React from "react";
 const App = () => {
   return (
     <>
