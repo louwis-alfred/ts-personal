@@ -16,7 +16,7 @@ export const Person: React.FC<Person> = (props) => {
     <div>
       <p>Name: {props.name}</p>
       <p>Age: {props.age}</p>
-      <p>This person: {props.isMarried ? "is Married" : "is Sin gle"}</p>
+      <p>This person: {props.isMarried ? "is Married" : "is Single"}</p>
       <p>
         {""}
         {props.name} Bio: {!personBio ? "No Bio Available" : personBio}
